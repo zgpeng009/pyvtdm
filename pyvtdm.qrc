@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="..">
+    <file>icons/tedges.png</file>
+    <file>icons/back.png</file>
+    <file>icons/right.png</file>
+    <file>icons/top.png</file>
+    <file>icons/bottom.png</file>
+    <file>icons/front.png</file>
+    <file>icons/left.png</file>
+  </qresource>
+</RCC>
