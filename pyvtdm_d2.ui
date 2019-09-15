@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1238</width>
+    <height>828</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>数据查询</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="2,1">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1,1">
+       <item>
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>数据检索</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="0">
+            <widget class="QTreeWidget" name="treeWidget">
+             <column>
+              <property name="text">
+               <string>虚拟试验项目结构树</string>
+              </property>
+              <property name="font">
+               <font>
+                <kerning>true</kerning>
+               </font>
+              </property>
+              <property name="foreground">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>0</red>
+                 <green>0</green>
+                 <blue>0</blue>
+                </color>
+               </brush>
+              </property>
+             </column>
+             <item>
+              <property name="text">
+               <string>静力试验</string>
+              </property>
+              <property name="background">
+               <brush brushstyle="SolidPattern">
+                <color alpha="255">
+                 <red>85</red>
+                 <green>170</green>
+                 <blue>255</blue>
+                </color>
+               </brush>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>icons/file_icon.png</normalon>
+               </iconset>
+              </property>
+              <item>
+               <property name="text">
+                <string>几何模型</string>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normalon>icons/tsolid.png</normalon>
+                </iconset>
+               </property>
+               <item>
+                <property name="text">
+                 <string>机翼蒙皮</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normalon>icons/tedges.png</normalon>
+                 </iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>机翼主梁</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normalon>icons/tedges.png</normalon>
+                 </iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>机翼肋板</string>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normalon>icons/tedges.png</normalon>
+                 </iconset>
+                </property>
+               </item>
+              </item>
+              <item>
+               <property name="text">
+                <string>材料</string>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normalon>icons/tsolid.png</normalon>
+                </iconset>
+               </property>
+               <item>
+                <property name="text">
+                 <string>铝</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>钢</string>
+                </property>
+               </item>
+              </item>
+              <item>
+               <property name="text">
+                <string>载荷 </string>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normalon>icons/tsolid.png</normalon>
+                </iconset>
+               </property>
+               <item>
+                <property name="text">
+                 <string>X_1000</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Y_1000</string>
+                </property>
+               </item>
+              </item>
+             </item>
+             <item>
+              <property name="text">
+               <string>热试验</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>icons/file_icon.png</normalon>
+               </iconset>
+              </property>
+              <item>
+               <property name="text">
+                <string>几何模型</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>材料</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>载荷</string>
+               </property>
+              </item>
+             </item>
+             <item>
+              <property name="text">
+               <string>扫频试验</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>icons/file_icon.png</normalon>
+               </iconset>
+              </property>
+              <item>
+               <property name="text">
+                <string>几何模型</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>材料</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>载荷</string>
+               </property>
+              </item>
+             </item>
+             <item>
+              <property name="text">
+               <string>随机振动试验</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>icons/file_icon.png</normalon>
+               </iconset>
+              </property>
+              <item>
+               <property name="text">
+                <string>几何模型</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>材料</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>载荷</string>
+               </property>
+              </item>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_2">
+          <attribute name="title">
+           <string>数据筛选</string>
+          </attribute>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>试验模型信息</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QTableWidget" name="tableWidget_2">
+            <column>
+             <property name="text">
+              <string>a</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>b</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>c</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string>数据处理参数</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2" stretch="4,1">
+          <item>
+           <widget class="QTableWidget" name="tableWidget_3">
+            <column>
+             <property name="text">
+              <string>a</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>b</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_3">
+            <property name="title">
+             <string>功能菜单</string>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QPushButton" name="pushButton">
+               <property name="text">
+                <string>保存数据</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_2">
+               <property name="text">
+                <string>绘制曲线</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QTabWidget" name="tabWidget_2">
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tab_3">
+        <attribute name="title">
+         <string>几何模型</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QTableWidget" name="tableWidget">
+           <column>
+            <property name="text">
+             <string>a</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>b</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>c</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>d</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>e</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
