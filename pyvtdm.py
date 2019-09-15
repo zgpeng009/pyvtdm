@@ -1,4 +1,4 @@
-# coding: utf-8
+# coding: gbk
 
 import sys
 import vtk
@@ -8,11 +8,15 @@ import shelve
 
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog
 from PyQt5.uic import loadUiType
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 
 Ui_pyvtdm = loadUiType('pyvtdm_w.ui')[0]
 
-from diaglog.dialog_1 import DLG
 from interactor.interactor_style import MyInteractorStyle
+
+from pyvtdm_d1 import DIALOG1
 
 
 class MainWnd(QMainWindow, Ui_pyvtdm):
@@ -25,7 +29,7 @@ class MainWnd(QMainWindow, Ui_pyvtdm):
         self.setupUi(self)
         # self.show_maximized()
 
-        self.cwd = os.getcwd()  # 鑾峰彇褰撳墠绋嬪簭鏂囦欢浣嶇疆
+        self.cwd = os.getcwd()  # 获取当前程序文件位置
 
         self.grid = None
         self.color = vtk.vtkNamedColors()
@@ -55,7 +59,23 @@ class MainWnd(QMainWindow, Ui_pyvtdm):
 
         # self.style.SetDefaultRenderer(self.render)
         # self.style = vtk.vtkInteractorStyleRubberBandPick()
-        # vtk.vtkCommand() # 鏌ョ湅vtk浜嬩欢
+        # vtk.vtkCommand() # 查看vtk事件
+
+        listModel = QStringListModel()
+        items = ['######虚拟试验项目信息######',
+                 "试验名称：静力试验",
+                 "可视化对象：机翼蒙皮",
+                 '试验时间：2018-3-12',
+                 '试验责任人：李伟',
+                 "几何信息: ",
+                 '      单元类型：四边形单元',
+                 "      ******element->1920******",
+                 "      ******node->2318******",
+                 "材料：铝合金"]
+        listModel.setStringList(items)
+        self.listView.setModel(listModel)
+
+        self.statusBar().showMessage('当前用户： 李伟')  # 设置状态栏显示的消息
 
     def SetViewXY(self):
         camera = self.render.GetActiveCamera()
@@ -101,13 +121,6 @@ class MainWnd(QMainWindow, Ui_pyvtdm):
         aaa = self.iren.GetEventPosition()
         print(aaa)
 
-    def my_diag(self):
-        # QMessageBox.information(self, 'aaa', 'aaa')
-        # print('aaa')
-        self.dlg = DLG()
-        self.dlg.show()
-        # dlg.exec()
-
     def show_current(self):
         if self.grid:
             mapper = vtk.vtkDataSetMapper()
@@ -147,16 +160,16 @@ class MainWnd(QMainWindow, Ui_pyvtdm):
         shutil.copy(file_dat, file)
 
     def open_db(self):
-        files, filetype = QFileDialog.getOpenFileNames(self, "鎵撳紑鏂囦欢", self.cwd, "DataBase (*.db);;All Files (*)")
+        files, filetype = QFileDialog.getOpenFileNames(self, "打开文件", self.cwd, "DataBase (*.db);;All Files (*)")
 
-        # 璇诲彇鏁版嵁
+        # 读取数据
         if files:
             pass
 
     def open_bdf(self):
-        files, filetype = QFileDialog.getOpenFileNames(self, "鎵撳紑鏂囦欢", self.cwd, "DataBase (*.bdf);;All Files (*)")
+        files, filetype = QFileDialog.getOpenFileNames(self, "打开文件", self.cwd, "DataBase (*.bdf);;All Files (*)")
 
-        # 璇诲彇鏁版嵁
+        # 读取数据
         if files:
             from cae_model.bdf_model import FEM
             fem = FEM()
@@ -164,14 +177,21 @@ class MainWnd(QMainWindow, Ui_pyvtdm):
             self.show_current()
 
     def save_db(self):
-        file, filetype = QFileDialog.getSaveFileName(self, "淇濆瓨鏂囦欢", self.cwd, "DataBase (*.db);;All Files (*)")
+        file, filetype = QFileDialog.getSaveFileName(self, "保存文件", self.cwd, "DataBase (*.db);;All Files (*)")
 
-        # 淇濆瓨鏁版嵁
+        # 保存数据
         if file:
             with shelve.open(file, 'n') as db:
                 db['Tom'] = 'tom'
                 db['Jerry'] = 'jerry'
             shutil.copy(file + '.dat', file)
+
+    def open_pyvtdm_d1(self):
+        pyvtdm_d1 = DIALOG1()
+        if pyvtdm_d1.exec_() == QDialog.Accepted:
+            pass
+        else:
+            pyvtdm_d1.show()
 
 
 def main():

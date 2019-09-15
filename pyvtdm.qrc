@@ -1,6 +1,12 @@
 <RCC>
   <qresource prefix="..">
+    <file>icons/2019-9-15 16-49-26.jpg</file>
+    <file>icons/th (1).jpg</file>
+    <file>icons/258801-1504030T03177.jpg</file>
+    <file>icons/trotation_center.png</file>
+    <file>icons/tsolid.png</file>
     <file>icons/tedges.png</file>
+    <file>icons/file_icon.png</file>
     <file>icons/back.png</file>
     <file>icons/right.png</file>
     <file>icons/top.png</file>
