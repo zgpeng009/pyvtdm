@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>曲线绘制</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,4">
    <item>
