@@ -237,7 +237,7 @@
        <item>
         <widget class="QGroupBox" name="groupBox">
          <property name="title">
-          <string>试验模型信息</string>
+          <string>虚拟试验工况</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_3">
           <item>
@@ -256,7 +256,7 @@
        <item>
         <widget class="QGroupBox" name="groupBox_2">
          <property name="title">
-          <string>数据处理参数</string>
+          <string>工况信息</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2" stretch="4,1">
           <item>
