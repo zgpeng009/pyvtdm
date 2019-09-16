@@ -25,7 +25,52 @@
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
-           <widget class="QListWidget" name="listWidget"/>
+           <widget class="QListWidget" name="listWidget">
+            <item>
+             <property name="text">
+              <string>X方向加载</string>
+             </property>
+             <property name="background">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>0</red>
+                <green>170</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Y方向加载</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Z方向加载</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>XY方向加载</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>XZ方向加载</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>YZ方向加载</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>XYZ方向加载</string>
+             </property>
+            </item>
+           </widget>
           </item>
          </layout>
         </widget>
@@ -33,11 +78,99 @@
        <item>
         <widget class="QGroupBox" name="groupBox_2">
          <property name="title">
-          <string>系数</string>
+          <string>监测点</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_3">
           <item>
-           <widget class="QListWidget" name="listWidget_2"/>
+           <widget class="QListWidget" name="listWidget_2">
+            <item>
+             <property name="text">
+              <string>node 1</string>
+             </property>
+             <property name="background">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>85</red>
+                <green>170</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>node 2</string>
+             </property>
+             <property name="background">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>85</red>
+                <green>170</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>node 3</string>
+             </property>
+             <property name="background">
+              <brush brushstyle="SolidPattern">
+               <color alpha="255">
+                <red>85</red>
+                <green>170</green>
+                <blue>255</blue>
+               </color>
+              </brush>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>node 4</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>node 5</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>node 6</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>node 7</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>node 8</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>node 9</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>node 10</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>node 11</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>node 12</string>
+             </property>
+            </item>
+           </widget>
           </item>
          </layout>
         </widget>
@@ -116,6 +249,9 @@
          <widget class="QCheckBox" name="checkBox">
           <property name="text">
            <string>显示数值</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
           </property>
          </widget>
         </item>
