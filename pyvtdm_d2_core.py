@@ -41,25 +41,34 @@ class DIALOG2(QDialog, Ui_pyvtdm):
                 self.tableWidget.setRowHeight(j, 5)
                 self.tableWidget.setItem(j, i, _item)
 
-        label_list = ['工况名称', '工况编号', '载荷数量', '最大载荷', '最小载荷']
+        label_list = ['工况名称', '载荷数量', '最大载荷', '最小载荷']
         self.tableWidget_2.setRowCount(15)
         self.tableWidget_2.setColumnCount(5)
         self.tableWidget_2.setHorizontalHeaderLabels(label_list)
-        for j in range(15):
-            names_list = ['QUAD4']
-            for i, item in enumerate(names_list):
+        names_list = [['loadcase_01', '3', '10000N', '5000N'],
+                      ['loadcase_03', '3', '10000N', '5000N'],
+                      ['loadcase_04', '3', '10000N', '5000N'],
+                      ['loadcase_07', '6', '30000N', '10000N'],
+                      ['loadcase_08', '6', '30000N', '10000N'],
+                      ['loadcase_09', '6', '30000N', '10000N'],
+                      ['loadcase_11', '12', '60000N', '10000N'],
+                      ['loadcase_12', '12', '60000N', '10000N'], ]
+        for j, items in enumerate(names_list):
+            for i, item in enumerate(items):
                 _item = QTableWidgetItem(str(item))
                 _item.setTextAlignment(Qt.AlignCenter)
                 self.tableWidget_2.setRowHeight(j, 5)
                 self.tableWidget_2.setItem(j, i, _item)
 
-        label_list = ['载荷类型', '载荷编号', '载荷方向', '载荷大小', '载荷位置']
+        label_list = ['载荷类型', '载荷ID', '载荷方向', '载荷大小', '载荷位置']
         self.tableWidget_3.setRowCount(15)
         self.tableWidget_3.setColumnCount(5)
         self.tableWidget_3.setHorizontalHeaderLabels(label_list)
-        for j in range(15):
-            names_list = ['QUAD4']
-            for i, item in enumerate(names_list):
+        names_list = [['单点力', '1', 'X', '5000N', 'node 105'],
+                      ['单点力', '2', 'Y', '5000N', 'node 105'],
+                      ['单点力', '3', 'Z', '10000N', 'node 105'], ]
+        for j, items in enumerate(names_list):
+            for i, item in enumerate(items):
                 _item = QTableWidgetItem(str(item))
                 _item.setTextAlignment(Qt.AlignCenter)
                 self.tableWidget_3.setRowHeight(j, 5)

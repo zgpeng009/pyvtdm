@@ -9,6 +9,7 @@ from PyQt5.uic import loadUiType
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
+from PyQt5 import QtGui
 
 Ui_pyvtdm = loadUiType('pyvtdm_d3.ui')[0]
 myfont = matplotlib.font_manager.FontProperties(fname='simhei.ttf')
@@ -19,6 +20,22 @@ class DIALOG2(QDialog, Ui_pyvtdm):
         super().__init__(parent)
         self.setupUi(self)
         self.setWindowFlags(Qt.WindowCloseButtonHint | Qt.WindowMinMaxButtonsHint)
+
+        names_list = [['loadcase_01', '3', '10000N', '5000N'],
+                      ['loadcase_03', '3', '10000N', '5000N'],
+                      ['loadcase_04', '3', '10000N', '5000N'],
+                      ['loadcase_07', '6', '30000N', '10000N'],
+                      ['loadcase_08', '6', '30000N', '10000N'],
+                      ['loadcase_09', '6', '30000N', '10000N'],
+                      ['loadcase_11', '12', '60000N', '10000N'],
+                      ['loadcase_12', '12', '60000N', '10000N'], ]
+
+        for i, item in enumerate(names_list):
+            item = item[0]
+            _item = QListWidgetItem(item)
+            if i == 0:
+                _item.setBackground(QtGui.QColor(0, 170, 255))
+            self.listWidget.addItem(_item)
 
         names = [u'静力试验', u'加载级(0-1)', u'位移(mm)']
         data1 = np.array([i / 10.0 for i in range(1, 11)])

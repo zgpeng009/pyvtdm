@@ -25,52 +25,7 @@
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
-           <widget class="QListWidget" name="listWidget">
-            <item>
-             <property name="text">
-              <string>X方向加载</string>
-             </property>
-             <property name="background">
-              <brush brushstyle="SolidPattern">
-               <color alpha="255">
-                <red>0</red>
-                <green>170</green>
-                <blue>255</blue>
-               </color>
-              </brush>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Y方向加载</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Z方向加载</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>XY方向加载</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>XZ方向加载</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>YZ方向加载</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>XYZ方向加载</string>
-             </property>
-            </item>
-           </widget>
+           <widget class="QListWidget" name="listWidget"/>
           </item>
          </layout>
         </widget>
